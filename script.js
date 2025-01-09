@@ -1,3 +1,5 @@
+const input = document.getElementById("amount");
+const currencyPara = document.getElementById("rate");
 const toCurrency = document.getElementById("to-currency");
 countriesCurrencies.forEach((code) => {
   let child = document.createElement("option");
@@ -37,8 +39,10 @@ async function convertCurrency() {
     let data = await response.json();
 
     let exchangeRate = data.conversion_rates[requiredCurrencyName];
-    return exchangeRate;
+    let amount = input.value;
+    let roundedAmount = (amount * exchangeRate).toFixed(2);
+    return roundedAmount;
   }
-  let rate = await fetchData();
-  console.log(rate);
+  currencyPara.innerText = `${await fetchData()} ${toCurrency.value.toLowerCase()}`;
 }
+convertCurrency();
