@@ -11,7 +11,7 @@ This repository contains a currency converter I built while practicing API integ
 - Glassmorphism look for modern design
 - Improved UX for easy currency conversion
 - Real-time amount conversion
-- Access to 60 countries' currencies
+- Access to 100+ countries' currencies
 - Displays the flag of each country for better user experience
 
 ## Technologies Used
